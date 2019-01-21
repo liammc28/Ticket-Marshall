@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar padding color="secondary">
+    <p ion-text no-margin class="text-white">
+      <strong> Choose An Event You Want To Scan Tickets For</strong>
+    </p>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+      <ion-item *ngFor="let event of eventList" (click)="scanBarcode(event.id)">
+
+      <h2>{{event?.name}}</h2>
+
+      <p>Date:
+        <strong>{{event?.date}}</strong>
+      </p>
+
+      <p>Venue:
+        <strong>{{event?.venue}}</strong>
+      </p>
+      </ion-item>
+    </ion-list>
+
+
+</ion-content>
+
+
+
+
+
+

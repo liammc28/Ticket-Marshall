@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color='primary'>
+  <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header><strong><a>{{currentEvent?.name}}</a></strong></ion-card-header>
+    <ion-card-content>
+      <p>Ticket price:
+        <strong>€{{currentEvent?.price}}</strong>
+      </p>
+      <p>Date:
+        <strong>{{currentEvent?.date}}</strong>
+      </p>
+      <p>Genre:
+        <strong> {{currentEvent?.genre}}</strong>
+      </p>
+      <p>Venue:
+        <strong> {{currentEvent?.venue}}</strong>
+      </p>
+
+      <p>County:
+        <strong> {{currentEvent?.county}}</strong>
+      </p>
+
+      <p>Number of Tickets:
+        <strong> {{currentEvent?.numOfTickets}}</strong>
+      </p>
+
+      <p>Description:
+        <strong> {{currentEvent?.description}}</strong>
+      </p>
+      <button ion-button block class="marginTop" (click)="takeEventPicture()"><strong>Add Event Picture</strong></button>
+      <img [src] =path />
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

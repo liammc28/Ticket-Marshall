@@ -1,0 +1,46 @@
+<!--
+  Generated template for the EventSettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+  <ion-header class="no-shadow">
+
+    <ion-navbar class="no-border">
+      <ion-title>
+        <ion-icon name="cog" class="text-primary"></ion-icon>
+        <span class="text-primary">Settings</span>
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only (click)="goToEventProfile()">
+          <ion-icon name="person"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content class="common-bg">
+    <!-- User settings-->
+    <ion-item-group>
+      <ion-item-divider color="secondary" class="bold">App Settings</ion-item-divider>
+      <ion-item>
+        <p text-left ion-text color="dark" tappable (click)="GoToFaq()"><span>FAQ</span></p>
+      </ion-item>
+      <ion-item>
+        <p text-left ion-text color="dark" tappable (click)="GoToPrivacyPolicy()"><span>Private Policy</span></p>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <p text-left ion-text color="dark" tappable (click)="GoToAbout()"><span>About </span><ion-icon name="information-circle"></ion-icon></p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <p text-left ion-text color="dark" tappable (click)="GoToContact()"><span>Contact Us </span><ion-icon name=""></ion-icon></p>
+        </ion-label>
+      </ion-item>
+    </ion-item-group>
+
+    <button ion-button color="primary" full tappable (click)="EventLogOut()">LOG OUT</button>
+
+  </ion-content>

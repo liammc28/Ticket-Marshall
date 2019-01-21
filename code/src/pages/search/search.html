@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="getItems($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  <button ion-button block (click)="reset()"><strong>RESET</strong></button>
+  <ion-list>
+    <ion-item *ngFor="let event of eventLists" (click)="GoToUserEventDetailPage(event.id)">
+      <p>Name:
+        <strong>{{event.name}}</strong>
+      </p>
+      <p>Venue:
+        <strong>{{event.venue}}</strong>
+      </p>
+      <p>Genre:
+        <strong>{{event.genre}}</strong>
+      </p>
+      <p>Ticket price:
+        <strong>€{{event.price}}</strong>
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

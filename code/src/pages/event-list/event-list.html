@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>TicketMarshall</ion-title>
+  </ion-navbar>
+  <ion-toolbar padding color="secondary">
+    <p ion-text no-margin class="text-white">
+      <strong> Below is your created events list </strong>
+    </p>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button block color="primary" (click)="goToCreate()">
+    Create a new Event
+  </button>
+  <ion-list>
+    <ion-item *ngFor="let event of eventList" (click)="goToEventDetail(event.id)">
+
+      <h2>{{event?.name}}</h2>
+
+      <p>Date:
+        <strong>{{event?.date}}</strong>
+      </p>
+
+      <p>Venue:
+        <strong>{{event?.venue}}</strong>
+      </p>
+
+      <p>Genre:
+        <strong>{{event?.genre}}</strong>
+      </p>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
